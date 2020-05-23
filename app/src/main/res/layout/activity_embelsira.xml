@@ -6,133 +6,272 @@
     android:layout_height="match_parent"
     tools:context=".EmbelsiraActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Embelsira"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="156dp"
-        android:text="Hamburger"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:text="Cheeseburger"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="31dp"
-        android:text="CheckBox"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Doner"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="44dp"
-        android:text="250"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
-        android:layout_marginBottom="67dp"
-        android:text="170"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/checkBox" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="69dp"
-        android:text="200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="200"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="58dp"
-        android:onClick="goBack"
-        android:text="Back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="172dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="146dp"
-        android:layout_marginBottom="145dp"
-        android:text="Order"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
-        android:onClick="Order"/>
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:onClick="goBack"
 
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="240dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="28dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        android:gravity="center"
-        />
+                >
+
+                <ImageView
+
+
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    app:srcCompat="@drawable/arrow"
+                    >
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/languagebackground"
+
+
+                        android:text="EN"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/albania"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/languagebackground"
+
+
+                        android:text="AL"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/lineari_scroll"
+
+            android:text="Drink"
+            android:textColor="#000000"
+
+
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/lineari_kryesor2"
+
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coca-Cola"
+                        android:textSize="15sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+                        >
+
+                    </TextView>
+
+                    <ImageView
+
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+
+                        app:srcCompat="@drawable/cocacola" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="158dp"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/lineari_kryesor2"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pepsi"
+                        android:textSize="15sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+                        >
+
+                    </TextView>
+
+                    <ImageView
+
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/pepsi" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginVertical="20dp">
+                <LinearLayout
+                    android:layout_width="158dp"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/lineari_kryesor2"
+
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beer"
+                        android:textSize="15sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+                        >
+
+                    </TextView>
+
+                    <ImageView
+
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/beer" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="158dp"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/lineari_kryesor2"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water"
+                        android:textSize="15sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+                        >
+
+                    </TextView>
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/water" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            android:background="#ffffff"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+
+                android:background="@drawable/lineari_kryesor3"
+                android:text="Order"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
