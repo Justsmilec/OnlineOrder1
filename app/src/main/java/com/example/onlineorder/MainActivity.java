@@ -1,5 +1,10 @@
 package com.example.onlineorder;
 
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -8,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -15,13 +21,16 @@ public class MainActivity extends AppCompatActivity {
     static float ratioX;
     static float ratioY;
 
-    public LinearLayout fastfood,Sallata,Embelsira,Pije,mish,pica,pasta,antiPasta;
+    public LinearLayout fastfood,Sallata,Embelsira,Pije,mish,pica,pasta,antiPasta,menu_kryesore;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -32,14 +41,17 @@ public class MainActivity extends AppCompatActivity {
         ratioX = 1080 / width;
         ratioY = 2220 / height;
 
-        Pije = (LinearLayout) findViewById(R.id.arrow_1);
-        Embelsira = (LinearLayout) findViewById(R.id.arrow_2);
-        Sallata = (LinearLayout) findViewById(R.id.arrow_3);
-        mish = (LinearLayout) findViewById(R.id.arrow_4);
-        fastfood = (LinearLayout) findViewById(R.id.arrow_5);
-        pica = (LinearLayout) findViewById(R.id.arrow_6);
-        pasta = (LinearLayout) findViewById(R.id.arrow_7);
-        antiPasta = (LinearLayout) findViewById(R.id.arrow_8);
+
+        Pije = (LinearLayout) findViewById(R.id.linearLayout1);
+        Embelsira = (LinearLayout) findViewById(R.id.linearLayout2);
+        Sallata = (LinearLayout) findViewById(R.id.linearLayout3);
+        mish = (LinearLayout) findViewById(R.id.linearLayout4);
+        fastfood = (LinearLayout) findViewById(R.id.linearLayout5);
+        pica = (LinearLayout) findViewById(R.id.linearLayout6);
+        pasta = (LinearLayout) findViewById(R.id.linearLayout7);
+        antiPasta = (LinearLayout) findViewById(R.id.linearLayout8);
+        menu_kryesore = (LinearLayout) findViewById(R.id.albania);
+
 
 
 
@@ -52,48 +64,71 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
                 overridePendingTransition(0,0);
+
+            }
+        });
+        menu_kryesore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), MenuActivity.class));
+
+
             }
         });
         Embelsira.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         Sallata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         mish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         fastfood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         pica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         pasta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
         antiPasta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), EmbelsiraActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
 
@@ -158,4 +193,23 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_menu,menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.nav_menu1:
+                //do something
+                return true;
+            case R.id.nav_menu2:
+                //do something
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

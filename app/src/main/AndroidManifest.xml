@@ -13,7 +13,9 @@
         <activity android:name=".EmbelsiraActivity" />
         <activity android:name=".SallataActivity" />
         <activity android:name=".FastfoodActivity" />
+        <activity android:name=".MenuActivity"/>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

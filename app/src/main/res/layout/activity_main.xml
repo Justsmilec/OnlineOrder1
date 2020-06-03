@@ -10,18 +10,19 @@
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/scroll1"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-       >
+
+
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -29,45 +30,43 @@
 
                 style="@style/title"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center_vertical"
-                android:text="   Porosia Online"
+                android:text="   PorosiaOnline"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
-               />
+                android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/languages"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:gravity="right"
             android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:orientation="horizontal"
 
             >
 
             <LinearLayout
                 android:id="@+id/english"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
                 android:gravity="right"
-                android:layout_marginRight="10dp"
                 android:orientation="horizontal">
 
-                <Button
+                <ImageView
                     android:id="@+id/button2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
                     style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
 
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/languagebackground"
+                    app:srcCompat="@drawable/user_"
 
-
-                    android:text="EN"
 
                     />
             </LinearLayout>
@@ -76,19 +75,18 @@
                 android:id="@+id/albania"
                 android:layout_width="wrap_content"
 
-                android:layout_height="150dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                <ImageView
+                    android:id="@+id/buttonMenu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+
                     android:background="@drawable/languagebackground"
-                    style="?android:attr/borderlessButtonStyle"
+                    app:srcCompat="@drawable/menu_hamburger"
 
-
-                    android:text="AL"
 
                     />
 
@@ -100,31 +98,29 @@
 
 
 
-    <LinearLayout
-        android:id="@+id/scroll1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/lineari_scroll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/headerContainer"
 
 
-        >
     <ScrollView
         android:id="@+id/scroll2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/lineari_scroll"
+
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerContainer"
         >
         <LinearLayout
+
+
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="vertical">
+            android:orientation="vertical"
+
+
+            >
 
             <TextView
                 android:id="@+id/textView9"
@@ -142,7 +138,7 @@
                 />
 
             <LinearLayout
-                android:id="@+id/linearLayout5"
+                android:id="@+id/linearLayout1"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -156,8 +152,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView1"
@@ -206,7 +201,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout6"
+                android:id="@+id/linearLayout2"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -220,8 +215,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView66"
@@ -268,7 +262,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout7"
+                android:id="@+id/linearLayout3"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -282,8 +276,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView17"
@@ -329,7 +322,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout58"
+                android:id="@+id/linearLayout4"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -343,8 +336,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView18"
@@ -390,7 +382,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout59"
+                android:id="@+id/linearLayout5"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -404,8 +396,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView19"
@@ -451,7 +442,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout4"
+                android:id="@+id/linearLayout6"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -465,8 +456,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -512,7 +502,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout3"
+                android:id="@+id/linearLayout7"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -526,8 +516,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -573,11 +562,11 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout2"
+                android:id="@+id/linearLayout8"
                 android:layout_width="330dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="170dp"
+                android:layout_marginBottom="220dp"
                 android:background="@drawable/lineari_kryesor8"
                 android:orientation="horizontal"
 
@@ -587,8 +576,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    >
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -635,9 +623,101 @@
         </LinearLayout>
     </ScrollView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/footer_menu"
+        android:orientation="horizontal"
+
+
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/home_icon"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+
+                app:layout_constraintStart_toEndOf="@+id/linearLayout9"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout11">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/shop_icon"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    android:background="@drawable/profile_image"
+
+
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:orientation="horizontal"
+
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/user1"
+                        >
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

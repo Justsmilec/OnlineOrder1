@@ -11,29 +11,30 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class EmbelsiraActivity extends AppCompatActivity {
-    LinearLayout back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_embelsira);
-
-    }
-
-
-    /*public void goBack(View view)
-    {
-        startActivity(new Intent(view.getContext(), MainActivity.class));
-        //toolbar gradient
+//toolbar gradient
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );*/
+        );
+    }
+
+
+
 
 
     public void goBack(View view){
 
         super.onBackPressed();
         overridePendingTransition(0,0);
+
+
+
     }
+
+
 }
