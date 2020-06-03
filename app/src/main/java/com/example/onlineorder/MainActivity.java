@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     static float ratioY;
 
     public LinearLayout fastfood,Sallata,Embelsira,Pije,mish,pica,pasta,antiPasta,menu_kryesore;
+    public ImageView clickOnMenu;
 
 
     @Override
@@ -51,6 +54,35 @@ public class MainActivity extends AppCompatActivity {
         pasta = (LinearLayout) findViewById(R.id.linearLayout7);
         antiPasta = (LinearLayout) findViewById(R.id.linearLayout8);
         menu_kryesore = (LinearLayout) findViewById(R.id.albania);
+
+        //**Added
+        clickOnMenu = (ImageView) findViewById(R.id.buttonMenu);
+
+
+        clickOnMenu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //Creating the instance of PopupMenu
+                PopupMenu popup = new PopupMenu(MainActivity.this, clickOnMenu);
+                //Inflating the Popup using xml file
+                popup.getMenuInflater().inflate(R.menu.custom_navigation_view, popup.getMenu());
+
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        Toast.makeText(MainActivity.this,"You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                });
+
+                popup.setGravity(10);
+                popup.show();//showing popup menu
+            }
+        });//closing the setOnClickListener method
+
+
+
 
 
 
@@ -195,21 +227,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_menu,menu);
+        inflater.inflate(R.menu.custom_navigation_view,menu);
         return true;
     }
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        switch (id){
-            case R.id.nav_menu1:
-                //do something
-                return true;
-            case R.id.nav_menu2:
-                //do something
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+        return  true;
     }
 
 }
