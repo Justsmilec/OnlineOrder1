@@ -1,11 +1,17 @@
 package com.example.onlineorder;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.widget.ImageView;
+import android.widget.ListPopupWindow;
 import android.widget.PopupMenu;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +23,12 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import static android.provider.MediaStore.MediaColumns.TITLE;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,10 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
+        
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
@@ -57,39 +66,13 @@ public class MainActivity extends AppCompatActivity {
 
         //**Added
         clickOnMenu = (ImageView) findViewById(R.id.buttonMenu);
-
-
         clickOnMenu.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                //Creating the instance of PopupMenu
-                PopupMenu popup = new PopupMenu(MainActivity.this, clickOnMenu);
-                //Inflating the Popup using xml file
-                popup.getMenuInflater().inflate(R.menu.custom_navigation_view, popup.getMenu());
-
-                //registering popup with OnMenuItemClickListener
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(MainActivity.this,"You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                        return true;
-                    }
-                });
-
-                popup.setGravity(10);
-                popup.show();//showing popup menu
+                Intent i = new Intent(getApplicationContext(),MenuActivity.class);
+                startActivity(i);
             }
-        });//closing the setOnClickListener method
-
-
-
-
-
-
-
-
-
-
+        });
 
         Pije.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -225,14 +208,6 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.custom_navigation_view,menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        return  true;
-    }
+
 
 }

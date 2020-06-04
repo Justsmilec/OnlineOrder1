@@ -1,26 +1,34 @@
 package com.example.onlineorder;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-public class MenuActivity  extends AppCompatActivity {
+
+public class MenuActivity  extends Activity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_menu,menu);
-        return true;
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.menu.custom_navigation_view);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+        //Ndrysho 8 ose 7 per te ndryshu madhesine
+        getWindow().setLayout((int)(width*.8), (int)(height*.7));
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.RIGHT;
+        params.x = 50; //margin per x
+        params.y = -100;//margin per y
+        getWindow().setAttributes(params);
+
     }
 
     }
